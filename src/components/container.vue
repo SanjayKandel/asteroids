@@ -44,7 +44,7 @@ export default {
     created(){
         let fullDate=new Date();
         let startDate = fullDate.getFullYear()+'-'+(fullDate.getMonth()+1)+'-'+fullDate.getDate();
-        axios.get(`http://www.neowsapp.com/rest/v1/feed?start_date=${startDate}&end_date=&detailed=false&api_key=rXdB2R2Am14AgjTOBPDYMoiPd58C8sSJ90ZZPi7q`)
+        axios.get(`https://www.neowsapp.com/rest/v1/feed?start_date=${startDate}&end_date=&detailed=false&api_key=rXdB2R2Am14AgjTOBPDYMoiPd58C8sSJ90ZZPi7q`)
         .then(response => (this.asteroidData=response.data['near_earth_objects']))
         .catch(err=>(console.log(err)));
         
